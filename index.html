@@ -1,76 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | Time tracking dashboard</title>
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css"> 
-</head>
-<body>
-
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  <!-- Scripts -->
-  <script src="js/script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="user">
+        <div class="user__content">
+          <img
+            src="images/image-jeremy.png"
+            alt="photo"
+            class="user__content--photo"
+          />
+          <div class="user__content--title">
+            <span class="title">Report for</span>
+            <span class="name">Jeremy Robson</span>
+          </div>
+        </div>
+        <div class="user__options">
+          <button class="user__options--btn" id="daily">Daily</button>
+          <button class="user__options--btn" id="weekly">Weekly</button>
+          <button class="user__options--btn" id="monthly">Monthly</button>
+        </div>
+      </div>
+      <div class="bg bg--work">
+        <div class="card">
+          <div class="card__header">
+            <span class="card__title">Work</span>
+            <div class="card__btn">
+              <img src="images/icon-ellipsis.svg" alt="ellipsis" />
+            </div>
+          </div>
+          <div class="card__info">
+            <span class="card__info--hours current-work">32hrs</span>
+            <span class="card__info--last previous-work"
+              >Last week - 36hrs</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="bg bg--play">
+        <div class="card">
+          <div class="card__header">
+            <span class="card__title">Play</span>
+            <div class="card__btn">
+              <img src="images/icon-ellipsis.svg" alt="ellipsis" />
+            </div>
+          </div>
+          <div class="card__info">
+            <span class="card__info--hours current-play">10hrs</span>
+            <span class="card__info--last previous-play">Last week - 8hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class="bg bg--study">
+        <div class="card">
+          <div class="card__header">
+            <span class="card__title">Study</span>
+            <div class="card__btn">
+              <img src="images/icon-ellipsis.svg" alt="ellipsis" />
+            </div>
+          </div>
+          <div class="card__info">
+            <span class="card__info--hours current-study">4hrs</span>
+            <span class="card__info--last previous-study"
+              >Last week - 7hrs</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="bg bg--exercise">
+        <div class="card">
+          <div class="card__header">
+            <span class="card__title">Exercise</span>
+            <div class="card__btn">
+              <img src="images/icon-ellipsis.svg" alt="ellipsis" />
+            </div>
+          </div>
+          <div class="card__info">
+            <span class="card__info--hours current-exercise">4hrs</span>
+            <span class="card__info--last previous-exercise"
+              >Last week - 5hrs</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="bg bg--social">
+        <div class="card">
+          <div class="card__header">
+            <span class="card__title">Social</span>
+            <div class="card__btn">
+              <img src="images/icon-ellipsis.svg" alt="ellipsis" />
+            </div>
+          </div>
+          <div class="card__info">
+            <span class="card__info--hours current-social">5hrs</span>
+            <span class="card__info--last previous-social"
+              >Last week - 10hrs</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="bg bg--selfcare">
+        <div class="card">
+          <div class="card__header">
+            <span class="card__title">Self Care</span>
+            <div class="card__btn">
+              <img src="images/icon-ellipsis.svg" alt="ellipsis" />
+            </div>
+          </div>
+          <div class="card__info">
+            <span class="card__info--hours current-selfcare">2hrs</span>
+            <span class="card__info--last previous-selfcare"
+              >Last week - 2hrs</span
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
