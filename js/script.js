@@ -1,24 +1,8 @@
 const $dailyButton = document.querySelector('#daily');
 const $weeklyButton = document.querySelector('#weekly');
 const $monthlyButton = document.querySelector('#monthly');
-
-const current = [
-    '.current-work',
-    '.current-play',
-    '.current-study',
-    '.current-exercise',
-    '.current-social',
-    '.current-selfcare'
-];
-
-const previous = [
-    '.previous-work',
-    '.previous-play',
-    '.previous-study',
-    '.previous-exercise',
-    '.previous-social',
-    '.previous-selfcare'
-];
+const $current = document.querySelectorAll('.card__info--hours');
+const $previous = document.querySelectorAll('.card__info--last');
 
 $dailyButton.addEventListener('click', fetchData);
 $weeklyButton.addEventListener('click', fetchData);
@@ -35,10 +19,10 @@ function fetchData(event) {
             else if (event.target.id === 'monthly') prevPeriod = 'Last Month';
 
             for (let x = 0; x < 6; x++) {
-                document.querySelector(current[x])
+                $current[x]
                     .innerHTML = `${data[x].timeframes[event.target.id].current}hrs`;
 
-                document.querySelector(previous[x])
+                $previous[x]
                     .innerHTML = `${prevPeriod} - ${data[x].timeframes[event.target.id].previous}hrs`;
             }
         })
